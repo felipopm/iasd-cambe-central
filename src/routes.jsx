@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Ajuda from "./pages/Ajuda";
 import Sentinela from "./pages/Sentinela";
-import Iasd from "./pages/Iasd";
+// import Iasd from "./pages/Iasd";
 import Farol from "./pages/Farol";
 import Sal from "./pages/Sal";
 import Home from "./pages/Home";
