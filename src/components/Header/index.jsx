@@ -35,7 +35,7 @@ function Header() {
                 </Link>
             </figure>
             <nav 
-                className={`${styles.menuSandwich} ${ showMenu ? styles.show : ''}`}
+                className={`${styles.menu} ${ showMenu ? styles.show : ''}`}
             >
                 <Link to="/">Home</Link>
                 <a 
@@ -46,13 +46,15 @@ function Header() {
                 <Link to="/sobre">Sobre</Link>
                 <Link to="/estou">Como estou</Link>
             </nav>
-            <div 
-                className={styles.menuButton}
-                onClick={toggleMenu}
-            >
-                <span className={styles.linha}></span>
-                <span className={styles.linha}></span>
-                <span className={styles.linha}></span>
+            <div className={styles.menuSandwich}>
+                <div
+                    className={styles.menuButton}
+                    onClick={toggleMenu}
+                >
+                    <span className={styles.linha}></span>
+                    <span className={styles.linha}></span>
+                    <span className={styles.linha}></span>
+                </div>
             </div>
         </header>
     );
