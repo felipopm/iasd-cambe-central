@@ -34,8 +34,8 @@ function Home() {
   // item.title.toLowerCase() toLowerCase() transforma as chaves em minusculas e buscando por "title"...
   // .includes() verifica se existem outras string dentro da string "title"
   const assuntosGerais = conteudo.filter((item) => item.category === "Sentinela" || item.category === "Farol" || item.category === "Sal" && item.title.toLowerCase().includes(filtroTexto.toLowerCase()))
-  // O componente Item representa cada vídeo do arquivo video.json, e é mapeado.
-  .map((db, index) => <Item key={index} db={db} index={index} />);
+    // O componente Item representa cada vídeo do arquivo video.json, e é mapeado.
+    .map((db, index) => <Item key={index} db={db} index={index} />);
   const handlePesquisa = (texto) => {
     // Atualizar o estado do filtro de texto
     setFiltroTexto(texto);
@@ -48,8 +48,8 @@ function Home() {
   // item.title.toLowerCase() toLowerCase() transforma as chaves em minusculas e buscando por "title"...
   // .includes() verifica se existem outras string dentro da string "title"
   const estudosBiblicos = conteudo.filter((item) => item.category === "Estudo" && item.title.toLowerCase().includes(filtroCategoria.toLowerCase()))
-  // O componente Item representa cada vídeo do arquivo video.json, e é mapeado.
-  .map((db, index) => <Item key={index} db={db} index={index}/>);
+    // O componente Item representa cada vídeo do arquivo video.json, e é mapeado.
+    .map((db, index) => <Item key={index} db={db} index={index} />);
   const handleEstudo = (categoria) => {
     // Atualizar o estado do filtro de texto
     setFiltroCategoria(categoria);
