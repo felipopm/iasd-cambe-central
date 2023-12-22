@@ -13,8 +13,20 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    width: 100%;
 
-    border: 1px solid red;
+    /* border: 1px solid red; */
+}
+.estudos {
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    height: 310px;
+    width: 100%;
+    padding-top: 10px;
+
+    /* border: 1px solid red; */
 }
 
 .noticiasenovo {
@@ -109,7 +121,8 @@
     /* Cor e espessura da linha  */
     width: 90%;
     /* Altura desejada da linha  */
-    margin-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     /*Espaçamento à esquerda da linha */
 }
 

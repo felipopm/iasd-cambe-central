@@ -1,4 +1,4 @@
-import videos from "../../json/db.json";
+import videos from "../../json/video.json";
 import PropTypes from "prop-types";
 
 // Componente de Vídeo

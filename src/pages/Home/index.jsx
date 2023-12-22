@@ -45,11 +45,27 @@ function Home() {
 
           <div className={styles.estudos_biblicos}>
             <h3>Estudos Bíblicos</h3>
-            <div>
-              https://drive.google.com/file/d/1Kte-CGsWQSAqBf5vhmSV5xQZPqR3Jfov/view?usp=drive_link
-              https://drive.google.com/file/d/1MAD-B9WWX8sJNl6b7ZyycTgcpifi6hrs/view?usp=drive_link
+            <div className={styles.estudos}>
+              <iframe src="https://drive.google.com/file/d/1MAD-B9WWX8sJNl6b7ZyycTgcpifi6hrs/preview" width="200" height="300"></iframe>
+              
+              <iframe src="https://drive.google.com/file/d/1Kte-CGsWQSAqBf5vhmSV5xQZPqR3Jfov/preview" width="200" height="300"></iframe>
+
+              <iframe src="https://drive.google.com/file/d/1Kte-CGsWQSAqBf5vhmSV5xQZPqR3Jfov/preview" width="200" height="300"></iframe>
+
+              <iframe src="https://drive.google.com/file/d/1Kte-CGsWQSAqBf5vhmSV5xQZPqR3Jfov/preview" width="200" height="300"></iframe>
+
+              <iframe src="https://drive.google.com/file/d/1Kte-CGsWQSAqBf5vhmSV5xQZPqR3Jfov/preview" width="200" height="300"></iframe>
+
+              <iframe src="https://drive.google.com/file/d/1Kte-CGsWQSAqBf5vhmSV5xQZPqR3Jfov/preview" width="200" height="300"></iframe>
+
+              <iframe src="https://drive.google.com/file/d/1Kte-CGsWQSAqBf5vhmSV5xQZPqR3Jfov/preview" width="200" height="300"></iframe>
+
+              <iframe src="https://drive.google.com/file/d/1Kte-CGsWQSAqBf5vhmSV5xQZPqR3Jfov/preview" width="200" height="300"></iframe>
+
             </div>
           </div>
+
+          <div className={styles.linha_horizontal}></div>
 
           <div className={styles.noticiasenovo}>
             <div className={styles.noticias}>
