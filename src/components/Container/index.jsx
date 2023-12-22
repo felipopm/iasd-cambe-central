@@ -22,7 +22,6 @@ function Container({ children, onPesquisa, onEstudo }) {
                 type="search" 
                 placeholder='Escreva um tema'
                 onChange={handlePesquisa && handleEstudo} 
-                
               />
             </div>
 
