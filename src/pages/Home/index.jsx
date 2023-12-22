@@ -5,6 +5,7 @@ import Container from '../../components/Container';
 import styles from './Home.module.css'
 import Item from "../../components/Card";
 import conteudo from "../../json/db.json";
+import Carousel from "../../components/Carousel";
 
 function Home() {
 
@@ -63,7 +64,9 @@ function Home() {
           <div className={styles.estudos_biblicos}>
             <h3>Estudos Bíblicos</h3>
             <div className={styles.estudos}>
-              {estudosBiblicos}
+              <Carousel>
+                {estudosBiblicos}
+              </Carousel>
             </div>
           </div>
 
