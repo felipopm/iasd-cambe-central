@@ -6,7 +6,7 @@ import { useState } from "react";
 import VideoItem from "../../components/Card";
 import videos from "../../json/db.json";
 
-function Farol(){
+function Farol() {
 
     const [filtroTexto, setFiltroTexto] = useState('');
 
@@ -18,12 +18,17 @@ function Farol(){
         setFiltroTexto(texto);
     }
 
-    return(
+    return (
         <>
             <Header />
-            <Container onPesquisa={handlePesquisa}>   
+            <Container onPesquisa={handlePesquisa}>
                 <section className={styles.farol}>
-                    
+
+                    <div className={styles.comabordagem}>
+                        <button className={styles.superficial}>Superficial</button>
+                        <button className={styles.profundo}>Profundo</button>
+                    </div>
+
                     <h2>Farol</h2>
 
                     <div className={styles.assuntos}>

@@ -12,11 +12,6 @@ function Sentinela() {
     // Filtrar por categoria "Titulo" ou "Sentinela"
     const sentinelaAssuntos = videos.filter((item) => item.category === "Sentinela" && item.title.toLowerCase().includes(filtroTexto.toLowerCase())).map((video, index) => <VideoItem key={index} video={video} index={index} />);
 
-    // ESTÁ NO CÓDIGO, MAS NÃO ESTÃO SENDO USADO
-    const [semAbordagem, setSemAbordagem] = useState(true)
-    const toggleAbordagem = () => { setSemAbordagem(!semAbordagem) }
-    // ESTÁ NO CÓDIGO, MAS NÃO ESTÃO SENDO USADO
-
     const handlePesquisa = (texto) => {
         // Atualizar o estado do filtro de texto
         setFiltroTexto(texto);
@@ -32,8 +27,6 @@ function Sentinela() {
                         <button className={styles.superficial}>Superficial</button>
                         <button className={styles.profundo}>Profundo</button>
                     </div>
-
-                    <span className={styles.abordagem} onClick={toggleAbordagem}>V</span>
 
                     <h2>Sentinela</h2>
 
