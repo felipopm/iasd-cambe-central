@@ -2,8 +2,8 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-
     width: 100%;
+
     /* border: 1px solid red; */
 }
 
@@ -11,8 +11,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
-    padding: 50px;
+    padding: 30px;
+    width: 100%;
 
     /* border: 1px solid red; */
 }
@@ -21,7 +21,9 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-
+    justify-content: center;
+    height: 56vh;
+    width: 100%;
     padding-top: 100px;
     padding-bottom: 100px;
 
@@ -32,26 +34,28 @@
     display: flex;
     align-items: center;
     position: absolute;
-    bottom: 0;
+    bottom: 30px;
     flex-direction: column;
     gap: 50px;
+    width: 100%;
 
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 
     /* border: 1px solid red; */
 }
-
 .midia {
     display: flex;
-    gap: 100px;
-
+    gap: 200px;
     font-size: 2rem;
     
     /* border: 1px solid blue; */
 }
-
 .midia a {
     text-decoration: none;
     color: black;
+    display: flex;
+    align-items: center;
+
+    /* border: 1px solid red; */
 }

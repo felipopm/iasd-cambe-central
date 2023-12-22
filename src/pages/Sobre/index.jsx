@@ -11,10 +11,10 @@ function Sobre() {
         <>
             <Header />
             <Container>
-                <section className={styles.sobre}>
+                <div className={styles.sobre}>
 
                     <h2>Sobre</h2>
-
+                    
                     <section className={styles.endereco}>
                         <h3>Igreja Adventista do Sétimo dia Central de Cambé</h3>
                         <h4>R. Bélgica, 1749 - Centro, Cambé - PR, 86181-080 </h4>
@@ -34,9 +34,9 @@ function Sobre() {
                                 <FaYoutube />
                             </a>
                         </div>
-
                     </section>
-                </section>
+
+                </div>
             </Container>
             <Footer />
         </>

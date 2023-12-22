@@ -8,8 +8,9 @@ function Farol(){
         <>
             <Header />
             <Container>
-                <h2 className={styles.titulo}>Estou</h2>
-                
+                <div className={styles.estou}>
+                    <h2>Estou</h2>
+                </div>
             </Container>
             <Footer />
         </>

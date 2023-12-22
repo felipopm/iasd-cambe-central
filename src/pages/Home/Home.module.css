@@ -1,25 +1,87 @@
-.home {
+.tudo {
     display: flex;
     align-items: center;
-    justify-content: center;
-
+    flex-direction: column;
     width: 100%;
-    min-height: 80vh;
+    /* min-height: 80vh; */
+    height: auto;
     
     /* border: 1px solid blue; */
 }
 
-.novo, .noticias{
+.noticiasenovo {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 300px;
+
+    /* border: 1px solid red; */
+}
+
+.linha_vertical {
+    border-left: 1px solid #c6c6c6; /* Cor e espessura da linha vertical */
+    height: 90%; /* Altura desejada da linha vertical */
+    margin-left: 1px; /* Espaçamento à esquerda da linha vertical */
+}
+
+.novo, .noticias {
     display: flex;
     align-items: center;
     justify-content:start;
     flex-direction: column;
-
     width: 50%;
-    height: 80vh;
-    margin: 10px;
 
     /* border: 1px solid red; */
+}
+
+.formulario {
+    padding: 20px;
+    gap: 5px;
+
+    /* border: 1px solid red; */
+}
+.formulario input, .formulario select, .formulario button {
+    border: 1px solid #949494;
+    padding: 7px;
+    border-radius: 3px;
+}
+.formulario input {
+    width: 300px;
+}
+.formulario select {
+    margin-left: 30px;
+}
+.formulario button {
+    background-color: #FFA500;
+}
+
+.geral {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    height: auto;
+    
+    /* border: 1px solid red; */
+}
+.conteudo {
+    display: flex;
+    align-items: start;
+        justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+    height: auto;
+    
+    /* border: 1px solid red; */
+}
+
+.linha_horizontal {
+    border-top: 1px solid #c6c6c6; /* Cor e espessura da linha vertical */
+    width: 90%; /* Altura desejada da linha vertical */
+    margin-bottom: 10px; /*Espaçamento à esquerda da linha vertical*/
 }
 
 .novo h3, .noticias h3 {
@@ -30,7 +92,6 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-
 }
 
 @media (max-width: 360px) {

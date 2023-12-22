@@ -3,6 +3,8 @@ import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import Container from '../../components/Container';
 import styles from './Home.module.css'
+import VideoItem from "../../components/Card";
+import videos from "../../json/db.json";
 
 function Home() {
 
@@ -23,71 +25,89 @@ function Home() {
     setLink('');
     setTitulo('');
     setAssunto('');
+
   };
+
+  const [filtroTexto, setFiltroTexto] = useState('');
+  // Filtrar por categoria "Titulo"
+  const assuntosGerais = videos.filter((item) => item.title.toLowerCase().includes(filtroTexto.toLowerCase())).map((video, index) => <VideoItem key={index} video={video} index={index} />);
+
+  const handlePesquisa = (texto) => {
+    // Atualizar o estado do filtro de texto
+    setFiltroTexto(texto);
+  }
 
   return (
     <>
       <Header />
-      <Container>
-        <section className={styles.home}>
+      <Container onPesquisa={handlePesquisa}>
+        <section className={styles.tudo}>
 
-          <div className={styles.noticias}>
-            <h3>Notícias</h3>
+          <div className={styles.noticiasenovo}>
+            <div className={styles.noticias}>
+              <h3>Notícias</h3>
+            </div>
+
+            <div className={styles.linha_vertical}></div>
+
+            <div className={styles.novo}>
+              <h3>Novo</h3>
+              <form
+                className={styles.formulario}
+                action="/submit"
+                method='post'
+                onSubmit={(e) => { e.preventDefault(); handleAdicionarConteudo(); }}
+              >
+                <input
+                  type="text"
+                  placeholder='Link do conteúdo'
+                  value={link}
+                  onChange={(e) => setLink(e.target.value)}
+                />
+                <input
+                  type="text"
+                  placeholder='Titulo do conteúdo'
+                  value={titulo}
+                  onChange={(e) => setTitulo(e.target.value)}
+                />
+                <div>
+                  <label htmlFor="assunto">Assunto:</label>
+                  <select
+                    name="assunto"
+                    id="assunto"
+                    value={titulo}
+                    onChange={(e) => setAssunto(e.target.value)}
+                  >
+                    <option value="Volta de Jesus">Volta de Jesus</option>
+                    <option value="Apocalipse">Apocalipse</option>
+                    <option value="Política">Política</option>
+                    <option value="Cultura">Cultura</option>
+                    <option value="Religião">Religião</option>
+                    <option value="Profissão">Profissão</option>
+                    <option value="Suicídio">Suicídio</option>
+                    <option value="Verdade">Verdade</option>
+                    <option value="Perdido">Perdido</option>
+                    <option value="Música">Música</option>
+                    <option value="Relacionamento">Relacionamento</option>
+                    <option value="Amor">Amor</option>
+                    <option value="Crescimento">Crescimento</option>
+                    <option value="Outros">Outros</option>
+                  </select>
+                </div>
+                <button type='submit'>Adicionar conteúdo</button>
+              </form>
+              <div>
+                Conteúdo adicionado recentemente
+              </div>
+            </div>
           </div>
 
-          <div className={styles.novo}>
-            <h3>Novo</h3>
+          <div className={styles.linha_horizontal}></div>
 
-            <form 
-              className={styles.formulario} 
-              action="/submit" 
-              method='post'
-              onSubmit={(e) => {
-                e.preventDefault();
-                handleAdicionarConteudo();
-              }}
-            >
-              <input 
-                type="text" 
-                placeholder='Link do conteúdo' 
-                value={link}
-                onChange={(e) => setLink(e.target.value)}
-              />
-              <input 
-                type="text" 
-                placeholder='Titulo do conteúdo'
-                value={titulo} 
-                onChange={(e) => setTitulo(e.target.value)}
-              />
-              <div>
-                <label htmlFor="assunto">Assunto:</label>
-                <select 
-                  name="assunto" 
-                  id="assunto"
-                  value={titulo} 
-                  onChange={(e) => setAssunto(e.target.value)}
-                >
-                  <option value="Volta de Jesus">Volta de Jesus</option>
-                  <option value="Apocalipse">Apocalipse</option>
-                  <option value="Política">Política</option>
-                  <option value="Cultura">Cultura</option>
-                  <option value="Religião">Religião</option>
-                  <option value="Profissão">Profissão</option>
-                  <option value="Suicídio">Suicídio</option>
-                  <option value="Verdade">Verdade</option>
-                  <option value="Perdido">Perdido</option>
-                  <option value="Música">Música</option>
-                  <option value="Relacionamento">Relacionamento</option>
-                  <option value="Amor">Amor</option>
-                  <option value="Crescimento">Crescimento</option>
-                  <option value="Outros">Outros</option>
-                </select>
-              </div>
-              <button type='submit'>Adicionar conteúdo</button>
-            </form>
-
-            <div>
-              Conteúdo adicionado recentemente
+          <div className={styles.geral}>
+            <h3>Todo o conteúdo</h3>
+            <div className={styles.conteudo}>
+              {assuntosGerais}
             </div>
           </div>
 

@@ -8,7 +8,7 @@ function Ajuda() {
         <>
             <Header />
             <Container>
-                <section className={styles.ajuda}>
+                <div className={styles.ajuda}>
                     <h2>Ajuda</h2>
                     <section className={styles.contatos}>
                         <div className={styles.emergencia}>
@@ -35,7 +35,7 @@ function Ajuda() {
                             <p>Pr. Darlei</p>
                         </div>
                     </section>
-                </section>
+                </div>
 
             </Container>
             <Footer />

@@ -24,9 +24,7 @@ function AppRoutes() {
                 <Route path="/sobre" element={<Sobre />}></Route>
                 <Route path="/estou" element={<Estou />}></Route>
                 <Route path="*" element={<Home />}></Route>
-                
                 <Route path="/teste" element={<Teste />}></Route>
-
             </Routes>
         </BrowserRouter>
     );

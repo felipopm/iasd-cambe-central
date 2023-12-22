@@ -1,11 +1,31 @@
+.comabordagem {
+    display: flex;
+    justify-content: center;
+    
+    /* border: 1px solid red; */
+}
+.superficial, .profundo {
+    background-color: #FDB348;
+    border: #949494;
+    width: 100px;
+    padding: 10px 0px 10px 0px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+.abordagem{
+    display: none;
+}
+
 .sentinela h2 {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 30px;
 
-    padding: 50px;
+    /* border: 1px solid red; */
 }
-
 .assuntos {
     display: flex;
     align-items: center;
@@ -14,6 +34,8 @@
     gap: 20px;
 
     width: 100%;
+
+    /* border: 1px solid red; */
 }
 
 

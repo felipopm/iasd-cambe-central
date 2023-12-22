@@ -7,23 +7,25 @@ import VideoItem from "../../components/Card";
 import videos from "../../json/db.json";
 
 function Sentinela() {
+    const [filtroTexto, setFiltroTexto] = useState('');
 
-    // Filtrar por categoria "Sentinela"
-    const sentinelaAssuntos = videos.filter((item) => item.category === "Sentinela").map((video, index) => <VideoItem key={index} video={video} index={index} />
-    );
+    // Filtrar por categoria "Titulo" ou "Sentinela"
+    const sentinelaAssuntos = videos.filter((item) => item.category === "Sentinela" && item.title.toLowerCase().includes(filtroTexto.toLowerCase())).map((video, index) => <VideoItem key={index} video={video} index={index} />);
 
+    // ESTÁ NO CÓDIGO, MAS NÃO ESTÃO SENDO USADO
     const [semAbordagem, setSemAbordagem] = useState(true)
     const toggleAbordagem = () => { setSemAbordagem(!semAbordagem) }
+    // ESTÁ NO CÓDIGO, MAS NÃO ESTÃO SENDO USADO
 
-    // const [ semSuperficial, setSemSuperficial ] = useState(true)
-    // const toggleSuperficial = () => { setSemSuperficial(!semSuperficial) }
-    // const [ semProfundo, setSemProfundo ] = useState(true)
-    // const toggleProfundo = () => { setSemProfundo (!semProfundo) }
+    const handlePesquisa = (texto) => {
+        // Atualizar o estado do filtro de texto
+        setFiltroTexto(texto);
+    }
 
     return (
         <>
             <Header />
-            <Container>
+            <Container onPesquisa={handlePesquisa}>
                 <section className={styles.sentinela}>
 
                     <div className={styles.comabordagem}>
@@ -31,24 +33,13 @@ function Sentinela() {
                         <button className={styles.profundo}>Profundo</button>
                     </div>
 
-                    <span className={`${styles.abordagem}`} onClick={toggleAbordagem}>V</span>
+                    <span className={styles.abordagem} onClick={toggleAbordagem}>V</span>
 
                     <h2>Sentinela</h2>
+
                     <div className={styles.assuntos}>       
                         {sentinelaAssuntos}
                     </div>
-
-
-                    {/* <div className={`${styles.comabordagem} ${semAbordagem ? styles.semabordagem : ''}`}>
-                        {assuntos.map((assunto, index) =>
-                            // eslint-disable-next-line react/jsx-key
-                            <Assunto assunto={assunto}>
-                                {filterAssunto(index).map((video) => <Card id={video.id} key={video.id} title={video.title} />)}
-                            </Assunto>
-                        )}
-                    </div>
-
-                    {children} */}
 
                 </section>
             </Container>
