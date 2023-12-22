@@ -5,8 +5,16 @@
     width: 100%;
     /* min-height: 80vh; */
     height: auto;
-    
+
     /* border: 1px solid blue; */
+}
+
+.estudos_biblicos {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    border: 1px solid red;
 }
 
 .noticiasenovo {
@@ -19,15 +27,19 @@
 }
 
 .linha_vertical {
-    border-left: 1px solid #c6c6c6; /* Cor e espessura da linha vertical */
-    height: 90%; /* Altura desejada da linha vertical */
-    margin-left: 1px; /* Espaçamento à esquerda da linha vertical */
+    border-left: 1px solid #c6c6c6;
+    /* Cor e espessura da linha vertical */
+    height: 90%;
+    /* Altura desejada da linha vertical */
+    margin-left: 1px;
+    /* Espaçamento à esquerda da linha vertical */
 }
 
-.novo, .noticias {
+.novo,
+.noticias {
     display: flex;
     align-items: center;
-    justify-content:start;
+    justify-content: start;
     flex-direction: column;
     width: 50%;
 
@@ -40,21 +52,28 @@
 
     /* border: 1px solid red; */
 }
-.formulario input, .formulario select, .formulario button {
+
+.formulario input,
+.formulario select,
+.formulario button {
     border: 1px solid #949494;
     padding: 7px;
     border-radius: 3px;
 }
+
 .formulario input {
     width: 300px;
 }
+
 .formulario select {
     margin-left: 30px;
 }
+
 .formulario button {
     background-color: #FFA500;
     cursor: pointer;
 }
+
 .conteudo_novo {
     display: flex;
     flex-direction: column;
@@ -69,28 +88,33 @@
     gap: 20px;
     width: 100%;
     height: auto;
-    
+
     /* border: 1px solid red; */
 }
+
 .conteudo {
     display: flex;
     align-items: start;
-        justify-content: center;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
     width: 100%;
     height: auto;
-    
+
     /* border: 1px solid red; */
 }
 
 .linha_horizontal {
-    border-top: 1px solid #c6c6c6; /* Cor e espessura da linha  */
-    width: 90%; /* Altura desejada da linha  */
-    margin-bottom: 10px; /*Espaçamento à esquerda da linha */
+    border-top: 1px solid #c6c6c6;
+    /* Cor e espessura da linha  */
+    width: 90%;
+    /* Altura desejada da linha  */
+    margin-bottom: 10px;
+    /*Espaçamento à esquerda da linha */
 }
 
-.novo h3, .noticias h3 {
+.novo h3,
+.noticias h3 {
     padding: 10px;
 }
 
@@ -103,11 +127,12 @@
 @media (max-width: 360px) {
     .home {
         flex-direction: column;
-        
+
         /* border: 1px solid blue; */
     }
-    .novo, .noticias{
+
+    .novo,
+    .noticias {
         width: 95%;
     }
 }
-

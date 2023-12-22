@@ -4,7 +4,7 @@ import Footer from '../../components/Footer'
 import Container from '../../components/Container';
 import styles from './Home.module.css'
 import VideoItem from "../../components/Card";
-import videos from "../../json/db.json";
+import videos from "../../json/video.json";
 
 function Home() {
 
@@ -42,6 +42,14 @@ function Home() {
       <Header />
       <Container onPesquisa={handlePesquisa}>
         <section className={styles.tudo}>
+
+          <div className={styles.estudos_biblicos}>
+            <h3>Estudos Bíblicos</h3>
+            <div>
+              https://drive.google.com/file/d/1Kte-CGsWQSAqBf5vhmSV5xQZPqR3Jfov/view?usp=drive_link
+              https://drive.google.com/file/d/1MAD-B9WWX8sJNl6b7ZyycTgcpifi6hrs/view?usp=drive_link
+            </div>
+          </div>
 
           <div className={styles.noticiasenovo}>
             <div className={styles.noticias}>
@@ -98,11 +106,11 @@ function Home() {
               </form>
 
               <div className={styles.conteudo_novo}>
-                <div>Conteúdo</div> 
+                <div>Conteúdo</div>
                 <div>X</div>
                 <div>adicionado recentemente...</div>
               </div>
-              
+
             </div>
           </div>
 

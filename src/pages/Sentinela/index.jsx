@@ -4,7 +4,7 @@ import Container from '../../components/Container'
 import styles from './Sentinela.module.css'
 import { useState } from "react";
 import VideoItem from "../../components/Card";
-import videos from "../../json/db.json";
+import videos from "../../json/video.json";
 
 function Sentinela() {
     const [filtroTexto, setFiltroTexto] = useState('');

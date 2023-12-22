@@ -3,7 +3,7 @@ import Footer from "../../components/Footer"
 import Container from '../../components/Container'
 import styles from './Sal.module.css'
 import VideoItem from "../../components/Card";
-import videos from "../../json/db.json";
+import videos from "../../json/video.json";
 import { useState } from "react";
 
 function Sal(){
