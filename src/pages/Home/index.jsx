@@ -96,9 +96,13 @@ function Home() {
                 </div>
                 <button type='submit'>Adicionar conteúdo</button>
               </form>
-              <div>
-                Conteúdo adicionado recentemente
+
+              <div className={styles.conteudo_novo}>
+                <div>Conteúdo</div> 
+                <div>X</div>
+                <div>adicionado recentemente...</div>
               </div>
+              
             </div>
           </div>
 
