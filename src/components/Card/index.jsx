@@ -1,17 +1,17 @@
 import PropTypes from "prop-types";
 import styles from "./Card.module.css"
 
-const VideoItem = ({ video, index }) => (
+const Item = ({ db, index }) => (
   <div className={styles.assuntos} key={index}>
-    <a className={styles.link} href={video.url} target="_blank" rel="noopener noreferrer"> <img src={video.cover} alt="Capa" />
+    <a className={styles.link} href={db.url} target="_blank" rel="noopener noreferrer"> <img src={db.cover} alt="Capa" />
     </a>
-    <h3 className={styles.titulo}>{video.title}</h3>
-    <p>{video.assunto} | {video.category}</p>
+    <h3 className={styles.titulo}>{db.title}</h3>
+    <p>{db.assunto} | {db.category}</p>
   </div>
 );
 
-VideoItem.propTypes = {
-  video: PropTypes.shape({
+Item.propTypes = {
+  db: PropTypes.shape({
     url: PropTypes.string.isRequired,
     cover: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
@@ -21,4 +21,4 @@ VideoItem.propTypes = {
   index: PropTypes.number.isRequired,
 };
 
-export default VideoItem;
+export default Item;

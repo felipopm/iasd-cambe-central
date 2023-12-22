@@ -2,8 +2,8 @@ import Header from "../../components/Header"
 import Footer from "../../components/Footer"
 import Container from '../../components/Container'
 import styles from './Sal.module.css'
-import VideoItem from "../../components/Card";
-import videos from "../../json/video.json";
+import Item from "../../components/Card";
+import conteudo from "../../json/db.json";
 import { useState } from "react";
 
 function Sal(){
@@ -11,7 +11,7 @@ function Sal(){
     const [filtroTexto, setFiltroTexto] = useState('');
 
     // Filtrar por categoria "Titulo" ou "Sentinela"
-    const salAssuntos = videos.filter((item) => item.category === "Sal" && item.title.toLowerCase().includes(filtroTexto.toLowerCase())).map((video, index) => <VideoItem key={index} video={video} index={index} />);
+    const salAssuntos = conteudo.filter((item) => item.category === "Sal" && item.title.toLowerCase().includes(filtroTexto.toLowerCase())).map((db, index) => <Item key={index} db={db} index={index} />);
 
     const handlePesquisa = (texto) => {
         // Atualizar o estado do filtro de texto

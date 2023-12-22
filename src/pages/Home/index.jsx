@@ -3,15 +3,14 @@ import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import Container from '../../components/Container';
 import styles from './Home.module.css'
-import VideoItem from "../../components/Card";
-import videos from "../../json/video.json";
+import Item from "../../components/Card";
+import conteudo from "../../json/db.json";
 
 function Home() {
 
   const [link, setLink] = useState('');
   const [titulo, setTitulo] = useState('');
   const [assunto, setAssunto] = useState('');
-
   const handleAdicionarConteudo = () => {
     // Simulando a adição de novo conteúdo ao estado local
     const novoConteudo = { link, titulo, assunto, };
@@ -29,24 +28,45 @@ function Home() {
   };
 
   const [filtroTexto, setFiltroTexto] = useState('');
-  // Filtrar por categoria "Titulo"
-  const assuntosGerais = videos.filter((item) => item.title.toLowerCase().includes(filtroTexto.toLowerCase())).map((video, index) => <VideoItem key={index} video={video} index={index} />);
-
+  // Filtrar por titulo
+  // conteudo.filter(...) filtra o arquivo db.json...
+  // item.title.toLowerCase() toLowerCase() transforma as chaves em minusculas e buscando por "title"...
+  // .includes() verifica se existem outras string dentro da string "title"
+  const assuntosGerais = conteudo.filter((item) => item.title.toLowerCase().includes(filtroTexto.toLowerCase()))
+  // O componente Item representa cada vídeo do arquivo video.json, e é mapeado.
+  .map((db, index) => <Item key={index} db={db} index={index} />);
   const handlePesquisa = (texto) => {
     // Atualizar o estado do filtro de texto
     setFiltroTexto(texto);
   }
 
+  const [filtroCategoria, setFiltroCategoria] = useState('');
+  // Filtrar por categoria e titulo
+  // conteudo.filter(...) filtra o arquivo db.json...
+  // item.category filtra pela category que tem o valor Estudo...
+  // item.title.toLowerCase() toLowerCase() transforma as chaves em minusculas e buscando por "title"...
+  // .includes() verifica se existem outras string dentro da string "title"
+  const estudosBiblicos = conteudo.filter((item) => item.category === "Estudo" && item.title.toLowerCase().includes(filtroCategoria.toLowerCase()))
+  // O componente Item representa cada vídeo do arquivo video.json, e é mapeado.
+  .map((db, index) => <Item key={index} db={db} index={index}/>);
+  const handleEstudo = (categoria) => {
+    // Atualizar o estado do filtro de texto
+    setFiltroCategoria(categoria);
+  }
+
   return (
     <>
       <Header />
-      <Container onPesquisa={handlePesquisa}>
+      <Container onPesquisa={handlePesquisa} onEstudo={handleEstudo}>
         <section className={styles.tudo}>
 
           <div className={styles.estudos_biblicos}>
             <h3>Estudos Bíblicos</h3>
             <div className={styles.estudos}>
-              <iframe src="https://drive.google.com/file/d/1MAD-B9WWX8sJNl6b7ZyycTgcpifi6hrs/preview" width="200" height="300"></iframe>
+
+              {estudosBiblicos}
+
+              {/* <iframe src="https://drive.google.com/file/d/1MAD-B9WWX8sJNl6b7ZyycTgcpifi6hrs/preview" width="200" height="300"></iframe>
               
               <iframe src="https://drive.google.com/file/d/1Kte-CGsWQSAqBf5vhmSV5xQZPqR3Jfov/preview" width="200" height="300"></iframe>
 
@@ -60,7 +80,7 @@ function Home() {
 
               <iframe src="https://drive.google.com/file/d/1Kte-CGsWQSAqBf5vhmSV5xQZPqR3Jfov/preview" width="200" height="300"></iframe>
 
-              <iframe src="https://drive.google.com/file/d/1Kte-CGsWQSAqBf5vhmSV5xQZPqR3Jfov/preview" width="200" height="300"></iframe>
+              <iframe src="https://drive.google.com/file/d/1Kte-CGsWQSAqBf5vhmSV5xQZPqR3Jfov/preview" width="200" height="300"></iframe> */}
 
             </div>
           </div>

@@ -3,15 +3,15 @@ import Footer from "../../components/Footer"
 import Container from '../../components/Container'
 import styles from './Farol.module.css'
 import { useState } from "react";
-import VideoItem from "../../components/Card";
-import videos from "../../json/video.json";
+import Item from "../../components/Card";
+import conteudo from "../../json/db.json";
 
 function Farol() {
 
     const [filtroTexto, setFiltroTexto] = useState('');
 
     // Filtrar por categoria "Titulo" ou "Sentinela"
-    const farolAssuntos = videos.filter((item) => item.category === "Farol" && item.title.toLowerCase().includes(filtroTexto.toLowerCase())).map((video, index) => <VideoItem key={index} video={video} index={index} />);
+    const farolAssuntos = conteudo.filter((item) => item.category === "Farol" && item.title.toLowerCase().includes(filtroTexto.toLowerCase())).map((db, index) => <Item key={index} db={db} index={index} />);
 
     const handlePesquisa = (texto) => {
         // Atualizar o estado do filtro de texto
