@@ -26,14 +26,23 @@ function Ajuda() {
                             <p>Polícia Federal	<span className={styles.policiafederal}>194</span></p>
                             <p>Polícia Rodoviária	<span className={styles.policiarodoviaria}>(43)3378-1900</span></p>
                         </div>
+
+                        <hr />
+
                         <div className={styles.divulga}>
                             <h3>Telefones de meios de divulgação</h3>
                             <p>Rádio novo tempo Londrina (43) 99875-0009</p>
                         </div>
+
+                        <hr />
+
                         <div className={styles.pastoral}>
                             <h3>Ajuda pastoral</h3>
                             <p>Pr. Darlei</p>
                         </div>
+
+                        <hr />
+
                     </section>
                 </div>
 

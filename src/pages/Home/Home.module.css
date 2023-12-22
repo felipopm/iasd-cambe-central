@@ -79,9 +79,9 @@
 }
 
 .linha_horizontal {
-    border-top: 1px solid #c6c6c6; /* Cor e espessura da linha vertical */
-    width: 90%; /* Altura desejada da linha vertical */
-    margin-bottom: 10px; /*Espaçamento à esquerda da linha vertical*/
+    border-top: 1px solid #c6c6c6; /* Cor e espessura da linha  */
+    width: 90%; /* Altura desejada da linha  */
+    margin-bottom: 10px; /*Espaçamento à esquerda da linha */
 }
 
 .novo h3, .noticias h3 {

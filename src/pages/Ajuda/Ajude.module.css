@@ -2,8 +2,8 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-
-    width: 95%;
+    height: auto;
+    width: 100%;
 
     /* border: 1px solid red; */
 }
@@ -21,26 +21,29 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 30px;
-
     width: 100%;
 
     /* border: 1px solid red; */
+}
+
+hr {
+    border-top: 1px solid #c6c6c6; /* Cor e espessura da linha */
+    width: 90%; /* Altura desejada da linha  */
+    margin-bottom: 10px; /*Espaçamento à esquerda da linha */
 }
 
 .emergencia, .divulga, .pastoral {
     display: flex;
     align-items: center;
     flex-direction: column;
-
     border: 1px solid black;
 }
 
 .ajuda h3 {
     border-bottom: 1px solid black;
     width: 100%;
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -50,9 +53,7 @@
 .ajuda p {
     display: flex;
     align-items: center;
-
     padding: 5px;
-    
 }
 
 .funeraria {
@@ -62,7 +63,6 @@
     padding-inline: 10px;
     margin-left: 10px;
 }
-
 .ambulancia {
     background-color: white;
     color: red;
@@ -71,7 +71,6 @@
     padding-inline: 10px;
     margin-left: 10px;
 }
-
 .bombeiro {
     background-color: red;
     color: white;
@@ -79,7 +78,6 @@
     padding-inline: 10px;
     margin-left: 10px;
 }
-
 .mulher {
     background-color: pink;
     color: black;
@@ -87,7 +85,6 @@
     padding-inline: 10px;
     margin-left: 10px;
 }
-
 .denunciacivil, .defesacivil, .policiacivil  {
     background-color: black;
     color: white;
@@ -96,7 +93,6 @@
     padding-inline: 10px;
     margin-left: 10px;
 }
-
 .denunciamilitar, .policiamilitar {
     background-color: #DAAA88;
     color: black;
@@ -104,7 +100,6 @@
     padding-inline: 10px;
     margin-left: 10px;
 }
-
 .guardamunicipal {
     background-color: rgb(29, 29, 212);
     color: white;
@@ -112,7 +107,6 @@
     padding-inline: 10px;
     margin-left: 10px;
 }
-
 .policiafederal, .policiarodoviaria {
     background-color: black;
     color: yellow;
