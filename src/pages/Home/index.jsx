@@ -78,6 +78,9 @@ function Home() {
           <div className={styles.noticiasenovo}>
             <div className={styles.noticias}>
               <h3>Notícias</h3>
+              <div className={styles.noticia}>
+                <a href="https://www.bbc.com/portuguese/articles/cw0d4r2y6ero"><img src="../../../public/noticia-papa.png" alt="noticia papa" /></a>
+              </div>
             </div>
 
             <div className={styles.linha_vertical}></div>

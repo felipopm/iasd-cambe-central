@@ -5,10 +5,10 @@ import "./carousel.css";
 function Carousel({ children }) {
 
     const settings = {
-        dots: false,
+        dots: true,
         infinite: false,
         speed: 300,
-        centerMode: false,
+        centerMode: true,
         variableWidth: true,
         adaptiveHeight: true,
         //slidesToShow: 5,
