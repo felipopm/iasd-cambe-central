@@ -30,7 +30,7 @@
     display: flex;
     justify-content: center;
 
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .header img {
@@ -39,7 +39,7 @@
     padding-inline: 0.5rem;
     cursor: pointer;
 
-    border: 1px solid red;
+    /* border: 1px solid red; */
 
 }
 
