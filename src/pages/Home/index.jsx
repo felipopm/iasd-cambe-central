@@ -79,7 +79,7 @@ function Home() {
             <h3>Livros</h3>
             <div className={styles.livros}>
               <div className={styles.livro}>
-                <a href="https://drive.google.com/file/d/1jy8d1qZaLS1BnQdQXj6uOrGmfCjf4iEi/view?usp=drive_link"><img src="../../../public/o-grande-conflito.png" alt="O grande conflito" height="200" /></a>
+                <a href="https://drive.google.com/file/d/1jy8d1qZaLS1BnQdQXj6uOrGmfCjf4iEi/view?usp=drive_link" target='_blank' rel="noreferrer"><img src="../../../public/o-grande-conflito.png" alt="O grande conflito" height="200" /></a>
                 <h1>O grande conflito</h1>
               </div>
               <h1>Livro2</h1>
@@ -94,7 +94,7 @@ function Home() {
             <div className={styles.noticias}>
               <h3>Notícias</h3>
               <div className={styles.noticia}>
-                <a href="https://adra.org.br/rio-grande-do-sul/projeto-visao-solidaria-braille"><img src="../../../public/adra-def-visual.jpeg" alt="noticia adra def visual" height="200" /></a>
+                <a href="https://adra.org.br/rio-grande-do-sul/projeto-visao-solidaria-braille" target='_blank' rel="noreferrer"><img src="../../../public/adra-def-visual.jpeg" alt="noticia adra def visual" height="200" /></a>
                 <h1>Projeto solidário transforma vidas de pessoas com deficiência visual </h1>
               </div>
             </div>
@@ -160,7 +160,7 @@ function Home() {
           <div className={styles.linha_horizontal}></div>
 
           <div className={styles.geral}>
-            <h3>Todo o conteúdo</h3>
+            <h3>Vídeos</h3>
             <div className={styles.conteudo}>
               {assuntosGerais}
             </div>
