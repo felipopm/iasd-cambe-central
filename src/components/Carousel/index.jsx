@@ -11,7 +11,7 @@ function Carousel({ children }) {
         centerMode: true,
         variableWidth: true,
         adaptiveHeight: true,
-        //slidesToShow: 5,
+        // slidesToShow: 5,
         slidesToScroll: 1,
     };
 
