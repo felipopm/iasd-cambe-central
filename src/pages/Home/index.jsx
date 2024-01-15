@@ -82,9 +82,18 @@ function Home() {
                 <a href="https://drive.google.com/file/d/1jy8d1qZaLS1BnQdQXj6uOrGmfCjf4iEi/view?usp=drive_link" target='_blank' rel="noreferrer"><img src="../../../public/o-grande-conflito.png" alt="O grande conflito" height="200" /></a>
                 <h1>O grande conflito</h1>
               </div>
-              <h1>Livro2</h1>
-              <h1>Livro3</h1>
-              <h1>Livro4</h1>
+              <div className={styles.livro}>
+                <a href="https://drive.google.com/file/d/1A3wAk8YM33OeArCa4DTFogHdPjNstUs_/view?usp=drive_link" target='_blank' rel="noreferrer"><img src="../../../public/nisto-cremos.png" alt="Nisto cremos" height="200" /></a>
+                <h1>Nisto cremos</h1>
+              </div>
+              <div className={styles.livro}>
+                <a href="https://drive.google.com/file/d/14gfnsiJYTT5fbeIdJL5Zda-89g39v3o0/view?usp=drive_link" target='_blank' rel="noreferrer"><img src="../../../public/o-desejado.png" alt="O desejado de todas a nações" height="200" /></a>
+                <h1>O desejado de todas a nações</h1>
+              </div>
+              <div className={styles.livro}>
+                <a href="https://drive.google.com/file/d/1uEZS-QJGN6j64VCys_ZSLy1Yii4DYVMy/view?usp=drive_link" target='_blank' rel="noreferrer"><img src="../../../public/manual-iasd-2016.png" alt="Manual IASD 2016" height="200" /></a>
+                <h1>Manual IASD 2016</h1>
+              </div>
             </div>
           </div>
 
