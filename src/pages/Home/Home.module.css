@@ -41,6 +41,24 @@
     /* border: 1px solid blue; */
 }
 
+.livraria {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.livros {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+    /* border: 1px solid red; */
+}
+.livro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .noticiasenovo {
     display: flex;
     flex-direction: row;
@@ -68,7 +86,7 @@
 }
 
 .noticia img {
-    height: 70%;
+    width: 95%;
 
     /* border: 1px solid red; */
 }
@@ -170,12 +188,13 @@
     .noticiasenovo {
         display: flex;
         flex-direction: column;
+        height: 300px;
 
         /* border: 1px solid red; */
     }
 
     .noticias {
-        height: 100px;
+        height: 300px;
     }
 
     .novo,
