@@ -169,6 +169,7 @@ function Home() {
           <div className={styles.linha_horizontal}></div>
 
           <div className={styles.geral}>
+            <div className={styles.linha_horizontal}></div>
             <h3>Vídeos</h3>
             <div className={styles.conteudo}>
               {assuntosGerais}
