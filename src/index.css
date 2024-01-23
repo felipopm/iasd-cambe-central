@@ -24,3 +24,13 @@
 h2 {
   padding: 50px;
 }
+
+.menuButton {
+  z-index: 2;
+}
+.estudos_biblicos {
+  z-index: 1;
+}
+.estudos {
+  z-index: 1;
+}
