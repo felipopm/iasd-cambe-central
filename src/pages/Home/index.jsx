@@ -79,7 +79,7 @@ function Home() {
             <h3>Livros</h3>
             <div className={styles.livros}>
               <div className={styles.livro}>
-                <a href="https://drive.google.com/file/d/1jy8d1qZaLS1BnQdQXj6uOrGmfCjf4iEi/view?usp=drive_link" target='_blank' rel="noreferrer"><img src="{iasd-cambe-central}../../../public/o-grande-conflito.png" alt="O grande conflito" height="200" /></a>
+                <a href="https://drive.google.com/file/d/1jy8d1qZaLS1BnQdQXj6uOrGmfCjf4iEi/view?usp=drive_link" target='_blank' rel="noreferrer"><img src="{iasd-cambe-central/tree/main}/public/o-grande-conflito.png" alt="O grande conflito" height="200" /></a>
                 <h1>O grande conflito</h1>
               </div>
               <div className={styles.livro}>
